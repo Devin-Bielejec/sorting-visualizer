@@ -4,6 +4,7 @@ import useInterval from "../hooks/useInterval";
 import bubbleSort from "../sorting/bubbleSort";
 import selectionSort from "../sorting/selectionSort";
 import sortNames from "../sorting/index";
+import insertionSort from "../sorting/insertionSort";
 
 function randomArray(length) {
   let result = [];
@@ -81,6 +82,8 @@ export default function Sorting() {
         bubbleSort(informationForSorting);
       } else if (currentSort === "Selection Sort") {
         selectionSort(informationForSorting);
+      } else if (currentSort === "Insertion Sort") {
+        insertionSort(informationForSorting);
       }
     },
     isRunning ? 25 : null
@@ -108,6 +111,7 @@ export default function Sorting() {
               i={i}
               curIndex={curIndex}
               nextIndex={nextIndex}
+              pointerIndex={pointerIndex}
               currentSort={currentSort}
               maxValue={items.length * 10}
             />
