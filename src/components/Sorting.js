@@ -5,6 +5,7 @@ import bubbleSort from "../sorting/bubbleSort";
 import selectionSort from "../sorting/selectionSort";
 import sortNames from "../sorting/index";
 import insertionSort from "../sorting/insertionSort";
+import mergeSort from "../sorting/mergeSort";
 
 function randomArray(length) {
   let result = [];
@@ -84,6 +85,8 @@ export default function Sorting() {
         selectionSort(informationForSorting);
       } else if (currentSort === "Insertion Sort") {
         insertionSort(informationForSorting);
+      } else if (currentSort === "Merge Sort") {
+        mergeSort(informationForSorting);
       }
     },
     isRunning ? 25 : null

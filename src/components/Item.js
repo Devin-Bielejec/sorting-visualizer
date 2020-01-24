@@ -38,6 +38,16 @@ export default function Item({
     }
   }
 
+  if (currentSort === "Merge Sort") {
+    if (i === curIndex) {
+      currentColor = "yellow";
+    } else if (i === nextIndex) {
+      currentColor = "green";
+    } else {
+      currentColor = "white";
+    }
+  }
+
   return (
     <div
       className={`item ${currentColor}`}
